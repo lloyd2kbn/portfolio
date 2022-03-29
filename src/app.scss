@@ -1,0 +1,22 @@
+.app{
+    height: 100vh;  
+    .sections{
+        width: 100%;
+        height: calc(100vh - 70px);
+        position: relative;
+        top: 70px;
+        // áp dụng animation khi scroll trục y cho mấy thằng con của sections
+        scroll-snap-type: y mandatory;
+        //ẩn thanh scroll ở trục y
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        // 
+        scroll-behavior: smooth;   
+        >*{ // css cho tất cả các component ở phía sau
+            height: calc(100vh - 70px);
+            // khi scroll y nó sẽ ở trạng thái bắt đầu trang mỗi section
+            scroll-snap-align: start;
+        }
+    }
+}
