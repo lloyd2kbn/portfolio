@@ -4,11 +4,21 @@
     @include mobile{
         flex-direction: column;
     }
+    @include tablet{
+        flex-direction: column;
+    }
     .left{
             flex: 1;
             height: 100%;
             @include mobile{
                 width: 100%;
+            }
+            img{
+                @include tablet{
+                    height: 100%;
+                    width: 100%;
+                   object-fit: cover;
+                }
             }
            
     }
@@ -21,6 +31,7 @@
         @include mobile{
             width: 100%;
         }
+       
         h2{
             font-size: 30px;
         }

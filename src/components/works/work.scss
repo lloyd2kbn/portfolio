@@ -15,10 +15,20 @@
         &.left{
                 left: 100px;
                 transform: rotate(180deg);
+                @include tablet{
+                    left: 10px;
+                    background-color: $main-color;
+                    border-radius: 50%;
+                }
 
         }
         &.right{
             right: 100px;
+            @include tablet{
+                right: 10px;
+                background-color: $main-color;
+                border-radius: 50%;
+            }
         }  
     }
     .slider{
