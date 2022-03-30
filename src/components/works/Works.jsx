@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './work.scss'
 
 function Works() {
-    const[currentSlider,setCurrentSlider]=useState(1);
+    const[currentSlider,setCurrentSlider]=useState(0);
 
     const data = [
       {

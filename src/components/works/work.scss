@@ -1,3 +1,4 @@
+@import '../../global.scss';
 .works{
     background-color: crimson;
     display: flex;
@@ -8,6 +9,9 @@
         position: absolute;
         height: 50px;
         cursor: pointer;
+        @include mobile{
+            display: none;
+        }
         &.left{
                 left: 100px;
                 transform: rotate(180deg);
@@ -23,6 +27,12 @@
         position: absolute;
         left: 0;
         transition: all 1s ease;
+
+        @include mobile{
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-around;
+        }
         .container{
                 width: 100vw;
                 display: flex;
@@ -36,6 +46,10 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    @include mobile{
+                            width: 90%;
+                            height: 180px;
+                    }
                     .left{
                         flex: 4;
                         height: 80%;
@@ -62,9 +76,15 @@
                             }
                             h2{
                                 font-size: 20px;
+                                @include mobile{
+                                    font-size: 12px;
+                                }
                             }
                             p{
                                 font-size: 13px;
+                                @include mobile{
+                                    display: none;
+                                }
                             }
                             span{
                                 font-size: 12px;

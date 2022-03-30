@@ -9,4 +9,8 @@
         background-color: $main-color;
         color: white;
     }
+    @include mobile{
+        margin-right: 25px;
+        
+     }
 }

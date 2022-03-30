@@ -7,6 +7,7 @@
     background-color: white;
     color: $main-color;
     transition: all 1s ease;
+ 
     .wrapper{
         padding: 10px 30px;
         display: flex;
@@ -27,6 +28,9 @@
                 display: flex;
                 align-items: center;
                 margin-left: 30px;
+                @include mobile{
+                    display: none;
+                }
                 .icon{
                     font-size: 18px;
                     margin-right: 5px;
